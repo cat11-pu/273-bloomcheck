@@ -1,0 +1,14 @@
+{
+  "budget": 2,
+  "bits": 8,
+  "queries": ["a", "h", "b"],
+  "duplicate_error_code": "E_DUPLICATE_ELEMENT",
+  "bits_error_code": "E_BAD_BITS",
+  "event_error_code": "E_BAD_EVENT",
+  "state": { "bitmap": [0, 0, 0, 0, 0, 0, 0, 0], "inserted": [], "ledger": [], "applied": [] },
+  "events": [
+    { "id": 1, "kind": "add", "name": "a" },
+    { "id": 2, "kind": "add", "name": "b" },
+    { "id": 3, "kind": "add", "name": "c" }
+  ]
+}
