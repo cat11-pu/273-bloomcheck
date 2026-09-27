@@ -1,8 +1,16 @@
-// bloom.js：两个位置与置位（基线：一律给零号位、置位原样返回）
+// bloom.js：两个位置与置位
 export function slotsFor(name, bits) {
-  return [0, 0];
+  const text = String(name);
+  let sum = 0;
+  for (let index = 0; index < text.length; index += 1) {
+    sum += text.charCodeAt(index);
+  }
+  return [sum % bits, (sum * 3 + 1) % bits];
 }
 
 export function setBit(bitmap, index) {
-  return bitmap;
+  const next = bitmap.slice();
+  while (next.length <= index) next.push(0);
+  next[index] = 1;
+  return next;
 }
